@@ -9,7 +9,6 @@ const Navbar = () => {
     "Features",
     "Pricing",
     "Company",
-    "Blog",
   ];
 
   return (
@@ -24,14 +23,14 @@ const Navbar = () => {
                   <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
                     <span>
                       <Image
-                        src="/img/logo.svg"
+                        src="/img/discoball.png"
                         alt="N"
                         width="32"
                         height="32"
-                        className="w-8"
+                        className="w-14"
                       />
                     </span>
-                    <span>Nextly</span>
+                    <span>Poppin Events With J</span>
                   </span>
                 </Link>
 
@@ -90,7 +89,7 @@ const Navbar = () => {
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-              Get Started
+              Book Now
           </Link>
 
           <ThemeChanger />

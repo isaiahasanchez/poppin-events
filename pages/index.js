@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Head from "next/head";
 import Hero from "../components/hero";
 import Navbar from "../components/navbar";
@@ -11,8 +12,12 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import ServicesProvided from '../components/servicesProvided';
+import RentalItems from '../components/rentalItems';
 
 const Home = () => {
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -25,16 +30,27 @@ const Home = () => {
       </Head>
 
       <Navbar />
-      <Hero />
+      <Hero openPopup={() => { console.log("Popup should open now"); setPopupOpen(true); }} />
+
       <SectionTitle
-        pretitle="Nextly Benefits"
-        title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups
-        and indie projects. Its built with Next.js & TailwindCSS. And its
-        completely open-source.
+        pretitle="Poppin Events Benefits"
+        title="Why you should plan your next party with us today!">
+       Transform your next event with 'Poppin Events With J', where creativity meets elegance to create unforgettable moments that delight and inspire.
       </SectionTitle>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
+      <SectionTitle
+        pretitle="Packages Offered"
+        title="Here are three great packages to consider today!">
+       These packages come with everything pictured and listed.
+      </SectionTitle>
+      <ServicesProvided />
+      <SectionTitle
+        pretitle="Rental"
+        title="Here are more items available to add to your package!">
+       These can be added to any package or as a standalone.
+      </SectionTitle>
+      <RentalItems />
       <SectionTitle
         pretitle="Watch a video"
         title="Learn how to fullfil your needs">
@@ -57,7 +73,7 @@ const Home = () => {
       <Faq />
       <Cta />
       <Footer />
-      <PopupWidget />
+      <PopupWidget open={isPopupOpen} setOpen={setPopupOpen} />
     </>
   );
 }
