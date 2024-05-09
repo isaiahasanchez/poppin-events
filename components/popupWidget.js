@@ -17,58 +17,14 @@ const PopupWidget = ({open, setOpen}) => {
 
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
-  const onSubmit = async (data, e) => {
+  const onSubmit = (data, e) => {
     if (process.env.NODE_ENV === 'production') {
-      // Let Netlify handle the form directly in production
-      e.preventDefault(); // Prevent the default JavaScript submission if needed
-      const form = e.target;
-  
-      // Optionally, construct a URL-encoded form data string
-      const formData = new FormData(form);
-      const encodedData = new URLSearchParams(formData).toString();
-  
-      fetch(form.action, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: encodedData
-      }).then(response => {
-        console.log('Submission successful', response);
-        setIsSuccess(true);
-        setMessage("Thank you! We've received your submission.");
-        reset();
-      }).catch(error => {
-        console.log('Submission failed', error);
-        setIsSuccess(false);
-        setMessage("Submission failed. Please try again.");
-      });
+      // Let Netlify handle the form submission directly in production
+      // No need to preventDefault as Netlify needs the form submit event
     } else {
-      // Your existing development API call
+      e.preventDefault(); // Prevent default form submission in development
       console.log(data);
-      await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(data, null, 2),
-      }).then(async (response) => {
-        let json = await response.json();
-        if (json.success) {
-          setIsSuccess(true);
-          setMessage(json.message);
-          e.target.reset();
-          reset();
-        } else {
-          setIsSuccess(false);
-          setMessage(json.message);
-        }
-      }).catch((error) => {
-        setIsSuccess(false);
-        setMessage("Client Error. Please check the console.log for more info");
-        console.log(error);
-      });
+      // Your existing fetch logic here for development
     }
   };
   
