@@ -35,22 +35,17 @@ const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "NOOOssO, this template is completely free to use.",
+    question: "Can I supply my own balloons and pay you for labor?",
+    answer: "No, We work strictly with professional grade biodegradable balloons. This quality of balloons will last through your event with no issues.",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "Why do you need a deposit?",
+    answer: "A deposit is required to secure your date",
   },
   {
-    question: "What is your refund policy? ",
+    question: "Is my deposit refundable if I cancel my event?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
-  },
-  {
-    question: "Do you offer technical support? ",
-    answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "No your deposit is not refundable in any circumstance this is 50% of your total payment",
   },
 ];
 
