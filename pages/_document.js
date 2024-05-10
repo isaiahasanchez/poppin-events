@@ -12,25 +12,10 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
-                    {/* Hidden Form for Netlify */}
-                    <form name="contact" method="POST" netlify  netlify-honeypot="bot-field"  hidden>
-            <input type="hidden" name="form-name" value="contact" />
+          {/* Hidden Form for Netlify */}
+          <form name="testForm" netlify netlify-honeypot="bot-field" action='/' hidden>
             <input type="text" name="name" />
-            <input type="text" name="location" />
-            <input type="tel" name="phone" />
             <input type="email" name="email" />
-            <select name="service">
-              <option value="balloons">Balloons</option>
-              <option value="flowerBouquet">Fresh flower bouquet</option>
-              <option value="360Camera">360 Camera</option>
-              {/* Add other services as needed */}
-            </select>
-            <input type="date" name="date" />
-            <input type="time" name="time" />
-            <input type="radio" name="locationType" value="Indoor" />
-            <input type="radio" name="locationType" value="Outdoor" />
-            <input type="radio" name="locationType" value="Both" />
-            <textarea name="message"></textarea>
           </form>
           <Main />
           <NextScript />

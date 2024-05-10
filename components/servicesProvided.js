@@ -1,6 +1,14 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 
 const ServicesProvided = () => {
+    const [success, setSuccess] = useState(false);
+
+    useEffect(() => {
+      if ( window.location.search.includes('success=true') ) {
+        setSuccess(true);
+      }
+    }, []);
+
   return (
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -48,9 +56,12 @@ const ServicesProvided = () => {
         </div>
       </div>
 
-
+      {success && (
+          <p style={{ color: "green" }}>Thanks for your message! </p>
+        )}
       <div className="mt-8">
-        <form name="testForm" method="POST" data-netlify="true">
+        <form name="testForm" method="POST" action="/?success=true"
+ data-netlify="true">
           <input type="hidden" name="form-name" value="testForm" />
           <div>
             <label htmlFor="name">Name:</label>
