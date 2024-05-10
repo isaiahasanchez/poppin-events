@@ -83,7 +83,7 @@ const PopupWidget = ({open, setOpen}) => {
                   </p>
                 </div>
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
-                  <form name="contact" method= "POST" onSubmit={handleSubmit(onSubmit)} data-netlify="true"  noValidate>
+                  <form name="contact" method= "POST" onSubmit={handleSubmit(onSubmit)} netlify  noValidate>
                   <input type="hidden" name="form-name" value="contact" />
                     <h2 className="text-lg font-semibold text-gray-900">Event Inquiry Form</h2>
                     <p>Thank you for choosing PoppinEventsWithJ for your next event! Fill out this form to help us plan your special day with you!</p>

@@ -13,7 +13,7 @@ class MyDocument extends Document {
         </Head>
         <body>
                     {/* Hidden Form for Netlify */}
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+                    <form name="contact" method="POST" netlify  netlify-honeypot="bot-field"  hidden>
             <input type="hidden" name="form-name" value="contact" />
             <input type="text" name="name" />
             <input type="text" name="location" />
