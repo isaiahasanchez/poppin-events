@@ -14,6 +14,8 @@ import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 import ServicesProvided from '../components/servicesProvided';
 import RentalItems from '../components/rentalItems';
+import ContactForm from "../components/contact-form";
+
 
 const Home = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -33,13 +35,14 @@ const Home = () => {
       <Hero openPopup={() => { console.log("Popup should open now"); setPopupOpen(true); }} />
 
       <SectionTitle
+        id="about"
         pretitle="Poppin Events Benefits"
         title="Why you should plan your next party with us today!">
        Transform your next event with 'Poppin Events With J', where creativity meets elegance to create unforgettable moments that delight and inspire.
       </SectionTitle>
       <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
+        id="packages"
         pretitle="Packages Offered"
         title="Here are three great packages to consider today!">
        These packages come with everything pictured and listed.
@@ -66,10 +69,12 @@ const Home = () => {
         Use this section to highlight your popular customers.
       </SectionTitle>
       <Testimonials />
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
+      <SectionTitle id="faq" pretitle="FAQ" title="Frequently Asked Questions">
       </SectionTitle>
       <Faq />
       <Cta />
+      <ContactForm />
+
       <Footer />
       <PopupWidget open={isPopupOpen} setOpen={setPopupOpen} />
     </>

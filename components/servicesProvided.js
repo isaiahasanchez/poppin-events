@@ -59,23 +59,6 @@ const ServicesProvided = () => {
       {success && (
           <p style={{ color: "green" }}>Thanks for your message! </p>
         )}
-      <div className="mt-8">
-        <form name="testForm" method="POST" action="/?success=true"
- data-netlify="true">
-          <input type="hidden" name="form-name" value="testForm" />
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div className="mt-4">
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div className="mt-4">
-            <button type="submit" className="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600">Submit</button>
-          </div>
-        </form>
-      </div>
     </div>
   );
 }
