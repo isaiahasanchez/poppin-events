@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from '../components/navbar';
 import SectionTitle from '../components/sectionTitle';
 
+
 const sections = [
   {
     pretitle: "Decoration",
@@ -12,11 +13,11 @@ const sections = [
       {
         title: "Backdrop",
         items: [
-          { name: "Set of 3 Metal Arches", image: "/img/metal-arches.jpeg", price: "$70" },
-          { name: "Ribbed Wooden Backdrop", image: "/img/wooden-backdrop.jpeg", price: "$150" },
-          { name: "Circle Backdrop", image: "/img/circle-backdrop.jpeg", price: "$100" },
-          { name: "Box Hedges", image: "/img/box-hedges.jpeg", price: "$100 each or $150 pair" },
-          { name: "Green Grass Backdrop", image: "/img/grass-backdrop.jpeg", price: "$120" }
+          { name: "Set of 3 Metal Arches", image: "/img/metalarches.jpg", price: "$70" },
+          { name: "Ribbed Wooden Backdrop", image: "/img/ribbedwoodenbackdrop.jpg", price: "$150" },
+          { name: "Circle Backdrop", image: "/img/circlebackdrop.jpg", price: "$100" },
+          { name: "Box Hedges", image: "/img/boxhedges.jpeg", price: "$100 each or $150 pair" },
+          { name: "Green Grass Backdrop", image: "/img/greengrassbackdrop.jpg", price: "$120" }
         ]
       },
       {
