@@ -87,7 +87,9 @@ const Products = () => {
             </SectionTitle>
             {section.categories.map((category, idx) => (
               <div key={idx} className="mt-6">
-                <h3 className="text-lg font-semibold mb-4">{category.title}</h3>
+                <SectionTitle pretitle={category.title}>
+                some description
+            </SectionTitle>
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                   {category.items.map(item => (
                     <div key={item.name} className="card bg-base-100 shadow-xl">
