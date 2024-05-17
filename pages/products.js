@@ -23,10 +23,10 @@ const sections = [
       {
         title: "Balloon",
         items: [
-          { name: "Birthday Number Stack", image: "/img/birthday-stack.jpeg", price: "$40" },
-          { name: "Balloon Stack 40 in Number", image: "/img/balloon-stack.jpeg", price: "$30" },
-          { name: "Grab and Go Garland", image: "/img/garland.jpeg", price: "$25" },
-          { name: "DIY Balloon Kit", image: "/img/diy-kit.jpeg", price: "$50" }
+          { name: "Birthday Number Stack", image: "/img/birthdaystacknumbersm.jpg", price: "$40" },
+          { name: "Balloon Stack 40 in Number", image: "/img/birthday40.jpg", price: "$30" },
+          { name: "Grab and Go Garland", image: "/img/grabandgogarland.jpg", price: "$25" },
+          { name: "DIY Balloon Kit", image: "/img/diyballoonkit.jpg", price: "$50" }
         ]
       }
     ]
@@ -39,8 +39,9 @@ const sections = [
       {
         title: "Ramo Buchon",
         items: [
-          { name: "Money Bouquet", image: "/img/money-bouquet.jpeg", price: "$250" },
-          { name: "Flower Additions", image: "/img/flower-addons.jpeg", price: "Prices vary" }
+          { name: "Money Bouquet", image: "/img/moneybouquet.jpg", price: "$250" },
+          { name: "Wildflowers", image: "/img/wildflower.jpg", price: "Prices vary" },
+          { name: "Flower Additions", image: "/img/roses.jpg", price: "Prices vary" }
         ]
       }
     ]
@@ -49,7 +50,14 @@ const sections = [
     pretitle: "Entertainment",
     title: "Fun and Excitement",
     description: "Engaging entertainment options to delight your guests.",
-    categories: []
+    categories: [
+        {
+            title: "360 Camera",
+            items: [
+                { name: "360 Camera", image: "/img/360camera.jpg", price: "$250" }
+            ]
+        }
+    ]
   },
   {
     pretitle: "Miscellaneous",
@@ -59,8 +67,8 @@ const sections = [
       {
         title: "Special Extras",
         items: [
-          { name: "7 ft Bear", image: "/img/large-bear.jpeg", price: "$300" },
-          { name: "Custom Snack Wraps", image: "/img/snack-wraps.jpeg", price: "$15 per pack" }
+          { name: "7 ft Bear", image: "/img/7ftbear.jpg", price: "$300" },
+          { name: "Custom Snack Wraps", image: "/img/caprisun.png", price: "$15 per pack" }
         ]
       }
     ]
@@ -80,7 +88,7 @@ const Products = () => {
             {section.categories.map((category, idx) => (
               <div key={idx} className="mt-6">
                 <h3 className="text-lg font-semibold mb-4">{category.title}</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                   {category.items.map(item => (
                     <div key={item.name} className="card bg-base-100 shadow-xl">
                       <figure>
