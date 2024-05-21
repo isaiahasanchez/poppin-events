@@ -31,8 +31,8 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
-      <Hero openPopup={() => { console.log("Popup should open now"); setPopupOpen(true); }} />
+      <Navbar openPopup={() => setPopupOpen(!isPopupOpen)} currentPage="home" />
+      <Hero openPopup={() => setPopupOpen(!isPopupOpen)} /> {/* This button can open the popup */}
 
       <SectionTitle
         id="about"
@@ -41,6 +41,7 @@ const Home = () => {
        Transform your next event with 'Poppin Events With J', where creativity meets elegance to create unforgettable moments that delight and inspire.
       </SectionTitle>
       <Benefits data={benefitOne} />
+      <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
         id="packages"
         pretitle="Packages Offered"
@@ -74,7 +75,6 @@ const Home = () => {
       <Faq />
       <Cta />
       <ContactForm />
-
       <Footer />
       <PopupWidget open={isPopupOpen} setOpen={setPopupOpen} />
     </>

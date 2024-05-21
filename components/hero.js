@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Container from "./container";
-import heroImg from "../public/img/hero.png";
+import heroImg from "../public/img/flower-hero.png";
 
 const Hero = ({ openPopup }) => {
   return (

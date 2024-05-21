@@ -2,6 +2,8 @@ import React from 'react';
 import Image from "next/image";
 import Navbar from '../components/navbar';
 import SectionTitle from '../components/sectionTitle';
+import Footer from '../components/footer';
+import PopupWidget from '../components/popupWidget';
 
 
 const sections = [
@@ -11,17 +13,18 @@ const sections = [
     description: "From elegant arches to vibrant balloons, perfect for any event!",
     categories: [
       {
-        title: "Backdrop",
+        title: "Backdrops",
         items: [
           { name: "Set of 3 Metal Arches", image: "/img/metalarches.jpg", price: "$70" },
           { name: "Ribbed Wooden Backdrop", image: "/img/ribbedwoodenbackdrop.jpg", price: "$150" },
           { name: "Circle Backdrop", image: "/img/circlebackdrop.jpg", price: "$100" },
           { name: "Box Hedges", image: "/img/boxhedges.jpeg", price: "$100 each or $150 pair" },
-          { name: "Green Grass Backdrop", image: "/img/greengrassbackdrop.jpg", price: "$120" }
+          { name: "Green Grass Backdrop", image: "/img/greengrassbackdrop.jpg", price: "$120" },
+          { name: "Mockup of Installation", image: "/img/mockup.jpg", price: "$70 will be added to the invoice" }
         ]
       },
       {
-        title: "Balloon",
+        title: "Balloons",
         items: [
           { name: "Birthday Number Stack", image: "/img/birthdaystacknumbersm.jpg", price: "$40" },
           { name: "Balloon Stack 40 in Number", image: "/img/birthday40.jpg", price: "$30" },
@@ -110,6 +113,8 @@ const Products = () => {
           </div>
         ))}
       </div>
+      <Footer />
+      <PopupWidget />
     </>
   );
 }

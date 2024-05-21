@@ -12,11 +12,6 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
-          {/* Hidden Form for Netlify */}
-          <form name="testForm" netlify netlify-honeypot="bot-field" action='/' hidden>
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-          </form>
           <Main />
           <NextScript />
         </body>
