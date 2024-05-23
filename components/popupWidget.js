@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 const PopupWidget = ({ open, setOpen }) => {
-  const [state, handleSubmit] = useForm("mrgndblr"); // Replace "mrgndblr" with your actual Formspree form ID
+  const [state, handleSubmit] = useForm("mrgndblr");
+  const [showAlert, setShowAlert] = useState(false);
 
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    await handleSubmit(e);
+    if (state.succeeded) {
+      setOpen(false); // Close the form
+      document.getElementById("my_modal_1").showModal();
+    }
+  };
   return (
     <div>
       <button
@@ -31,6 +40,22 @@ const PopupWidget = ({ open, setOpen }) => {
         )}
       </button>
 
+      {/*Success form modal*/}
+      <dialog id="my_modal_1" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">Booking Inquiry Sent!</h3>
+          <p className="py-4">
+            Thank you for contacting us we will get back to you soon!
+          </p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
       {open && (
         <div className="fixed z-50 bottom-[100px] top-0 right-0 left-0 sm:top-auto sm:right-5 sm:left-auto flex flex-col overflow-hidden h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
           <button
@@ -56,7 +81,7 @@ const PopupWidget = ({ open, setOpen }) => {
             <h3 className="text-lg text-white">How can we help?</h3>
           </div>
           <div className="flex-grow h-full p-6 overflow-auto bg-gray-50">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleFormSubmit}>
               <h2 className="text-lg font-semibold text-gray-900">
                 Event Inquiry Form
               </h2>
@@ -250,7 +275,7 @@ const PopupWidget = ({ open, setOpen }) => {
                 <div className="collapse-content">
                   <div className="form-control">
                     <label className="label cursor-pointer">
-                      <span className="label-text">Basic Party Package</span>
+                      <span className="label-text">Super Star Package</span>
                       <input
                         type="radio"
                         name="package"
@@ -261,7 +286,7 @@ const PopupWidget = ({ open, setOpen }) => {
                   </div>
                   <div className="form-control">
                     <label className="label cursor-pointer">
-                      <span className="label-text">Premium Party Package</span>
+                      <span className="label-text">Baller Package</span>
                       <input
                         type="radio"
                         name="package"
@@ -272,7 +297,9 @@ const PopupWidget = ({ open, setOpen }) => {
                   </div>
                   <div className="form-control">
                     <label className="label cursor-pointer">
-                      <span className="label-text">Deluxe Party Package</span>
+                      <span className="label-text">
+                        We Can Bearly Wait Package
+                      </span>
                       <input
                         type="radio"
                         name="package"
@@ -465,7 +492,7 @@ const PopupWidget = ({ open, setOpen }) => {
 
                 <details className="collapse collapse-arrow bg-base-200 mb-4">
                   <summary className="collapse-title text-sm font-medium">
-                    Miscellaneous
+                    Add Ons
                   </summary>
                   <div className="collapse-content">
                     <div className="form-control">
@@ -473,7 +500,7 @@ const PopupWidget = ({ open, setOpen }) => {
                         <span className="label-text">7ft Bear</span>
                         <input
                           type="checkbox"
-                          name="miscellaneous"
+                          name="Add Ons"
                           value="7ft Bear"
                           className="checkbox"
                         />
@@ -484,8 +511,97 @@ const PopupWidget = ({ open, setOpen }) => {
                         <span className="label-text">Custom Snack Wraps</span>
                         <input
                           type="checkbox"
-                          name="miscellaneous"
+                          name="Add Ons"
                           value="Custom Snack Wraps"
+                          className="checkbox"
+                        />
+                      </label>
+                    </div>
+                    <div className="form-control">
+                      <label className="label cursor-pointer">
+                        <span className="label-text">
+                          Neon sign (Happy Birthday, Oh Baby, Etc.)
+                        </span>
+                        <input
+                          type="checkbox"
+                          name="products"
+                          value="Neon sign (Happy Birthday, Oh Baby, Etc.)"
+                          className="checkbox"
+                        />
+                      </label>
+                    </div>
+
+                    <div className="form-control">
+                      <label className="label cursor-pointer">
+                        <span className="label-text">Number Neon Sign</span>
+                        <input
+                          type="checkbox"
+                          name="products"
+                          value="Number Neon Sign"
+                          className="checkbox"
+                        />
+                      </label>
+                    </div>
+
+                    <div className="form-control">
+                      <label className="label cursor-pointer">
+                        <span className="label-text">
+                          Custom vinyl decal on balloon or backdrop
+                        </span>
+                        <input
+                          type="checkbox"
+                          name="products"
+                          value="Custom vinyl decal on balloon or backdrop"
+                          className="checkbox"
+                        />
+                      </label>
+                    </div>
+
+                    <div className="form-control">
+                      <label className="label cursor-pointer">
+                        <span className="label-text">
+                          Marquee number(s) or letter(s)
+                        </span>
+                        <input
+                          type="checkbox"
+                          name="products"
+                          value="Marquee number(s) or letter(s)"
+                          className="checkbox"
+                        />
+                      </label>
+                    </div>
+
+                    <div className="form-control">
+                      <label className="label cursor-pointer">
+                        <span className="label-text">12 ft Red Carpet</span>
+                        <input
+                          type="checkbox"
+                          name="products"
+                          value="12 ft Red Carpet"
+                          className="checkbox"
+                        />
+                      </label>
+                    </div>
+
+                    <div className="form-control">
+                      <label className="label cursor-pointer">
+                        <span className="label-text">Stanchions pair</span>
+                        <input
+                          type="checkbox"
+                          name="products"
+                          value="Stanchions pair"
+                          className="checkbox"
+                        />
+                      </label>
+                    </div>
+
+                    <div className="form-control">
+                      <label className="label cursor-pointer">
+                        <span className="label-text">Wooden crate</span>
+                        <input
+                          type="checkbox"
+                          name="products"
+                          value="Wooden crate"
                           className="checkbox"
                         />
                       </label>
@@ -494,24 +610,92 @@ const PopupWidget = ({ open, setOpen }) => {
                 </details>
               </details>
 
-              {/* Add ons Miscellaneous */}
+              {/* Mockup */}
+
+              <div className="group bg-base-200 rounded-xl mb-4 p-4 ">
+                <p className="text-lg font-medium">
+                  Would you like a mock-up of your installation?{" "}
+                </p>
+                <div className="form-control">
+                  <label className="label cursor-pointer">
+                    <span className="label-text">Yes</span>
+                    <input
+                      type="radio"
+                      name="Mockup?"
+                      value="Yes"
+                      className="radio checked:bg-blue-500"
+                    />
+                  </label>
+                </div>
+                <div className="form-control">
+                  <label className="label cursor-pointer">
+                    <span className="label-text">No</span>
+                    <input
+                      type="radio"
+                      value="No"
+                      name="Mockup?"
+                      className="radio checked:bg-blue-500"
+                    />
+                  </label>
+                </div>
+              </div>
+
+              {/* Terms and Conditions */}
+
+              <div className="group bg-base-200 rounded-xl mb-4 p-4 ">
+                <p className="text-md">
+                  All events are subject to delivery, setup, and tear down fee.
+                  **Important: A non-refundable 50% deposit is needed to secure
+                  your event date. The remaining balance must be paid 24 hours
+                  prior to the event. We’re excited to make your event
+                  unforgettable!!{" "}
+                </p>
+                <div className="form-control">
+                  <label className="label cursor-pointer">
+                    <span className="label-text">I Understand</span>
+                    <input
+                      type="radio"
+                      name="Agree to Cancellation fee"
+                      value="I Understand"
+                      className="radio checked:bg-blue-500"
+                    />
+                  </label>
+                </div>
+                <div className="form-control">
+                  <label className="label cursor-pointer">
+                    <span className="label-text">I Totally Understand</span>
+                    <input
+                      type="radio"
+                      value="I Totally Understand"
+                      name="Agree to Cancellation fee"
+                      className="radio checked:bg-blue-500"
+                    />
+                  </label>
+                </div>
+              </div>
 
               {/* Additional comments */}
               <div className="group bg-base-200 rounded-xl mb-4 p-4 ">
-                <p className="text-lg font-medium">Additional Comments</p>
-                <textarea className="textarea textarea-bordered" placeholder="Type Here"></textarea>
+                <p className="text-md mb-2">
+                  We'd love to hear about your theme, colors, and celebration
+                  details. If you have specific decorations in mind or need a
+                  custom design, please share any additional information. We are
+                  here to make your event truly special.
+                </p>
+                <textarea
+                  name="comments"
+                  className="text-sm h-32 textarea-lg textarea-bordered w-full max-w-xs"
+                  placeholder="Type Here"
+                ></textarea>
               </div>
-
-
 
               <button
                 type="submit"
-                className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
+                className="btn w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
               >
                 {state.submitting ? "Submitting..." : "Submit Inquiry"}
               </button>
             </form>
-            {state.succeeded && <p>Thanks for your submission!</p>}
           </div>
         </div>
       )}
