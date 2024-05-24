@@ -45,7 +45,12 @@ const faqdata = [
   {
     question: "Is my deposit refundable if I cancel my event?",
     answer:
-      "No your deposit is not refundable in any circumstance this is 50% of your total payment",
+      "No your deposit is not refundable in any circumstance this is 50% of your total payment.",
+  },
+  {
+    question: "I want to order from you but i don't see everything i'm looking for?",
+    answer:
+      "We are constantly adding new items to our shop, if it is something specific please let us know we would love to accommodate.",
   },
 ];
 

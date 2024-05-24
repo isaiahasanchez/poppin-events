@@ -57,7 +57,7 @@ const PopupWidget = ({ open, setOpen }) => {
       </dialog>
 
       {open && (
-        <div className="fixed z-50 bottom-[100px] top-0 right-0 left-0 sm:top-auto sm:right-5 sm:left-auto flex flex-col overflow-hidden h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
+        <div className="fixed z-50 bottom-[100px] top-0 right-0 left-0 sm:top-auto sm:right-5 sm:left-auto flex flex-col overflow-hidden h-full w-full sm:w-[350px] min-h-[250px] sm:h-[800px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
           <button
             className="absolute top-4 right-4 text-white"
             onClick={() => setOpen(false)}

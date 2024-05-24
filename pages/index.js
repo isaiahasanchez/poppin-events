@@ -4,17 +4,15 @@ import Hero from "../components/hero";
 import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
 
-import { benefitOne, benefitTwo } from "../components/data";
-import Video from "../components/video";
+import { benefitOne } from "../components/data";
+import InstagramEmbed from '../components/InstagramEmbed';
 import Benefits from "../components/benefits";
 import Footer from "../components/footer";
-import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
-import ServicesProvided from '../components/servicesProvided';
+import PackagesProvided from '../components/PackagesProvided';
 import RentalItems from '../components/rentalItems';
-import ContactForm from "../components/contact-form";
 
 
 const Home = () => {
@@ -23,32 +21,25 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Nextly - Free Nextjs & TailwindCSS Landing Page Template</title>
+        <title>Poppin Events with J - Event Planning Company</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="Poppin Events with J - Event Planning Company"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/img/poppin-logo.png" />
       </Head>
 
       <Navbar openPopup={() => setPopupOpen(!isPopupOpen)} currentPage="home" />
       <Hero openPopup={() => setPopupOpen(!isPopupOpen)} /> {/* This button can open the popup */}
 
-      <SectionTitle
-        id="about"
-        pretitle="Poppin Events Benefits"
-        title="Why you should plan your next party with us today!">
-       Transform your next event with 'Poppin Events With J', where creativity meets elegance to create unforgettable moments that delight and inspire.
-      </SectionTitle>
       <Benefits data={benefitOne} />
-      <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
         id="packages"
         pretitle="Packages Offered"
         title="Here are three great packages to consider today!">
        These packages come with everything pictured and listed.
       </SectionTitle>
-      <ServicesProvided />
+      <PackagesProvided />
       <SectionTitle
         pretitle="Rental"
         title="Here are more items available to add to your package!">
@@ -56,25 +47,15 @@ const Home = () => {
       </SectionTitle>
       <RentalItems />
       <SectionTitle
-        pretitle="Watch a video"
-        title="Learn how to fullfil your needs">
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
+        pretitle="Socials"
+        title="See us on Instagram!">
       </SectionTitle>
-      <Video />
-      <SectionTitle
-        pretitle="Testimonials"
-        title="Here's what our customers said">
-        Testimonails is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
-      </SectionTitle>
-      <Testimonials />
+      <InstagramEmbed />
+
       <SectionTitle id="faq" pretitle="FAQ" title="Frequently Asked Questions">
       </SectionTitle>
       <Faq />
-      <Cta />
-      <ContactForm />
+      <Cta openPopup={() => setPopupOpen(!isPopupOpen)}/>
       <Footer />
       <PopupWidget open={isPopupOpen} setOpen={setPopupOpen} />
     </>
