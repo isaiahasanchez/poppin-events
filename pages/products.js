@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from "next/image";
 import Navbar from '../components/navbar';
 import SectionTitle from '../components/sectionTitle';
@@ -79,9 +79,11 @@ const sections = [
 ];
 
 const Products = () => {
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
   return (
     <>
-      <Navbar />
+      <Navbar openPopup={() => setPopupOpen(!isPopupOpen)} />
       <div className="container mx-auto px-4 py-8">
         {sections.map((section, index) => (
           <div key={index}>
@@ -114,7 +116,7 @@ const Products = () => {
         ))}
       </div>
       <Footer />
-      <PopupWidget />
+      <PopupWidget open={isPopupOpen} setOpen={setPopupOpen} />
     </>
   );
 }

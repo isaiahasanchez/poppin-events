@@ -17,7 +17,7 @@ const Navbar = ({ openPopup }) => {
         <Link href="/">
           <div className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
             <Image
-              src="/img/discoball.png"
+              src="/img/poppin-logo.png"
               alt="Logo"
               width="32"
               height="32"
