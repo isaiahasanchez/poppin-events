@@ -54,7 +54,7 @@ const Home = () => {
 
       <SectionTitle id="faq" pretitle="FAQ" title="Frequently Asked Questions">
       </SectionTitle>
-      <Faq />
+      <Faq id="faq"/>
       <Cta openPopup={() => setPopupOpen(!isPopupOpen)}/>
       <Footer />
       <PopupWidget open={isPopupOpen} setOpen={setPopupOpen} />

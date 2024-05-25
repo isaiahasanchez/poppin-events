@@ -6,9 +6,9 @@ import { Disclosure } from "@headlessui/react";
 const Navbar = ({ openPopup }) => {
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "Packages", href: "/?scroll=packages" },
+    { name: "Packages", href: "/#packages" },
     { name: "All Products", href: "/products" },
-    { name: "FAQ", href: "/?scroll=faq" },
+    { name: "FAQ", href: "/#faq" },
   ];
 
   return (
