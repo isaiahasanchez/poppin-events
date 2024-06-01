@@ -36,7 +36,7 @@ const PopupWidget = ({ open, setOpen }) => {
             />
           </svg>
         ) : (
-          <div className="text-white">Book Now!</div>
+          <div className="text-white">Get a Quote!</div>
         )}
       </button>
 
@@ -610,35 +610,7 @@ const PopupWidget = ({ open, setOpen }) => {
                 </details>
               </details>
 
-              {/* Mockup */}
 
-              <div className="group bg-base-200 rounded-xl mb-4 p-4 ">
-                <p className="text-lg font-medium">
-                  Would you like a mock-up of your installation?{" "}
-                </p>
-                <div className="form-control">
-                  <label className="label cursor-pointer">
-                    <span className="label-text">Yes</span>
-                    <input
-                      type="radio"
-                      name="Mockup?"
-                      value="Yes"
-                      className="radio checked:bg-blue-500"
-                    />
-                  </label>
-                </div>
-                <div className="form-control">
-                  <label className="label cursor-pointer">
-                    <span className="label-text">No</span>
-                    <input
-                      type="radio"
-                      value="No"
-                      name="Mockup?"
-                      className="radio checked:bg-blue-500"
-                    />
-                  </label>
-                </div>
-              </div>
 
               {/* Terms and Conditions */}
 

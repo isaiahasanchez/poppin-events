@@ -50,19 +50,6 @@ const sections = [
     ]
   },
   {
-    pretitle: "Entertainment",
-    title: "Fun and Excitement",
-    description: "Engaging entertainment options to delight your guests.",
-    categories: [
-        {
-            title: "360 Camera",
-            items: [
-                { name: "360 Camera", image: "/img/360camera.jpg", price: "$250" }
-            ]
-        }
-    ]
-  },
-  {
     pretitle: "Miscellaneous",
     title: "Everything Else You Need",
     description: "Unique extras to make your event even more special.",

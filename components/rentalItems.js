@@ -10,119 +10,137 @@ const RentalItems = () => {
   return (
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-xl flex flex-col">
           <figure>
             <Image
               src={boxHedgesImage}
               alt="Box Hedges"
+              width={500}
+              height={300}
+              className="object-cover"
             />
           </figure>
-          <div className="card-body p-4">
-            <div className="flex flex-col">
+          <div className="card-body p-4 flex flex-col flex-grow">
+            <div className="flex flex-col flex-grow">
               <h2 className="card-title">Box Hedges</h2>
-              <div className="badge badge-secondary mb-2">Decor</div>
+              <ul className="flex flex-col justify-end flex-grow">
+                <li>
+                  <span className="text-green-500 mr-2">✓</span>Size: 4ft x 5ft
+                </li>
+                <li>
+                  <span className="text-green-500 mr-2">✓</span>Delivery is an
+                  additional fee or free pickup
+                </li>
+              </ul>
             </div>
-            <p>
-              <span className="text-green-500 mr-2">✓</span>Size: 4ft x 5ft
-            </p>
-            <p>
-              <span className="text-green-500 mr-2">✓</span>Delivery is an
-              additional fee or free pickup
-            </p>
-            <div className="card-actions flex-col mt-4">
+            <div className="card-actions mt-4 flex justify-between items-center">
+              <p className="text-lg font-bold">$100 each or $150 pair</p>
               <div className="badge badge-outline">Decor</div>
-              <p className="text-lg font-bold mt-2">$100 each or $150 pair</p>
             </div>
           </div>
         </div>
 
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-xl flex flex-col">
           <figure>
             <Image
               src={metalarches}
               alt="Set of 3 Metal Arches"
+              width={500}
+              height={300}
+              className="object-cover"
             />
           </figure>
-          <div className="card-body p-4">
-            <div className="flex flex-col">
+          <div className="card-body p-4 flex flex-col flex-grow">
+            <div className="flex flex-col flex-grow">
               <h2 className="card-title">Set of 3 Metal Arches</h2>
-              <div className="badge badge-secondary mb-2">Decor</div>
+              <ul className="flex flex-col justify-end flex-grow">
+                <li>
+                  <span className="text-green-500 mr-2">✓</span>Fabrics included,
+                  any color of choice
+                </li>
+                <li>
+                  <span className="text-green-500 mr-2">✓</span>Comes apart, you
+                  put it together
+                </li>
+                <li>
+                  <span className="text-green-500 mr-2">✓</span>Free pickup or
+                  delivery is an additional fee
+                </li>
+              </ul>
             </div>
-            <p>
-              <span className="text-green-500 mr-2">✓</span>Fabrics included,
-              any color of choice
-            </p>
-            <p>
-              <span className="text-green-500 mr-2">✓</span>Comes apart, you put
-              it together
-            </p>
-            <p>
-              <span className="text-green-500 mr-2">✓</span>Free pickup or
-              delivery is an additional fee
-            </p>
-            <div className="card-actions flex-col mt-4">
-              <div className="badge badge-outline">Entertainment</div>
-              <p className="text-lg font-bold mt-2">$70</p>
+            <div className="card-actions mt-4 flex justify-between items-center">
+              <p className="text-lg font-bold">$70</p>
+              <div className="badge badge-outline">Decor</div>
             </div>
           </div>
         </div>
 
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-xl flex flex-col">
           <figure>
             <Image
               src={birthdaystacknumbersm}
               alt="Birthday Number Stack"
+              width={500}
+              height={300}
+              className="object-cover"
             />
           </figure>
-          <div className="card-body p-4">
-            <div className="flex flex-col">
+          <div className="card-body p-4 flex flex-col flex-grow">
+            <div className="flex flex-col flex-grow">
               <h2 className="card-title">Birthday Number Stack</h2>
-              <div className="badge badge-secondary mb-2">Balloons</div>
+              <ul className="flex flex-col justify-end flex-grow">
+                <li>
+                  <span className="text-green-500 mr-2">✓</span>Personalized
+                  birthday number stack
+                </li>
+                <li>
+                  <span className="text-green-500 mr-2">✓</span>Customizable
+                  colors
+                </li>
+                <li>
+                  <span className="text-green-500 mr-2">✓</span>Free pickup or
+                  delivery is an additional fee
+                </li>
+              </ul>
             </div>
-            <p>
-              <span className="text-green-500 mr-2">✓</span>Personalized
-              birthday number stack
-            </p>
-            <p>
-              <span className="text-green-500 mr-2">✓</span>Customizable colors
-            </p>
-            <p>
-              <span className="text-green-500 mr-2">✓</span>Free pickup or
-              delivery is an additional fee
-            </p>
-            <div className="card-actions flex-col mt-4">
+            <div className="card-actions mt-4 flex justify-between items-center">
+              <p className="text-lg font-bold">$40</p>
               <div className="badge badge-outline">Decor</div>
-              <p className="text-lg font-bold mt-2">$40</p>
             </div>
           </div>
         </div>
 
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 shadow-xl flex flex-col">
           <figure>
             <Image
               src={diyballoonkit}
               alt="DIY Balloon Kit"
+              width={500}
+              height={300}
+              className="object-cover"
             />
           </figure>
-          <div className="card-body p-4">
-            <div className="flex flex-col">
+          <div className="card-body p-4 flex flex-col flex-grow">
+            <div className="flex flex-col flex-grow">
               <h2 className="card-title">DIY Balloon Kit</h2>
-              <div className="badge badge-secondary mb-2">Party Supplies</div>
+              <ul className="flex flex-col justify-end flex-grow">
+                <li>
+                  <span className="text-green-500 mr-2">✓</span>Includes all
+                  necessary materials
+                </li>
+                <li>
+                  <span className="text-green-500 mr-2">✓</span>Customizable
+                  colors
+                </li>
+                <li>
+                  <span className="text-green-500 mr-2">✓</span>Free pickup or
+                  delivery is an additional fee
+                </li>
+              </ul>
             </div>
-            <p>
-              <span className="text-green-500 mr-2">✓</span>Includes all
-              necessary materials
-            </p>
-            <p>
-              <span className="text-green-500 mr-2">✓</span>Customizable colors
-            </p>
-            <p>
-              <span className="text-green-500 mr-2">✓</span>Free pickup or
-              delivery is an additional fee
-            </p>
-            <div className="card-actions flex-col mt-4">
+            <div className="card-actions mt-4 flex justify-between items-center">
+              <p className="text-lg font-bold">$50</p>
               <div className="badge badge-outline">Party Supplies</div>
-              <p className="text-lg font-bold mt-2">$50</p>
             </div>
           </div>
         </div>

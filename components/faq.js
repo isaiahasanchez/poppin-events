@@ -35,10 +35,6 @@ const Faq = () => {
 
 const faqdata = [
   {
-    question: "Can I supply my own balloons and pay you for labor?",
-    answer: "No, We work strictly with professional grade biodegradable balloons. This quality of balloons will last through your event with no issues.",
-  },
-  {
     question: "Why do you need a deposit?",
     answer: "A deposit is required to secure your date",
   },

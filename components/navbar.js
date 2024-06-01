@@ -74,7 +74,7 @@ const Navbar = ({ openPopup }) => {
           ))}
           <button onClick={openPopup}>
             <div className="px-6 py-2 text-white bg-indigo-600 rounded-md">
-              Book Now
+              Get a Quote
             </div>
           </button>
           <ThemeChanger />

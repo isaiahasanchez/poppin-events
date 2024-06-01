@@ -16,7 +16,7 @@ const Cta = ({ openPopup}) => {
         <div className="flex-shrink-0 w-full text-center lg:w-auto">
         <button onClick={openPopup}>
             <div className="px-6 py-2 text-indigo-600 bg-white rounded-md">
-              Book Now
+              Get a Quote
             </div>
           </button>
         </div>
