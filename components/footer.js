@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by Poppin Events With J.
+          Copyright © {new Date().getFullYear()}. Made with ♥ by Isaiah Sanchez using web3templates
         </div>
       </Container>
     </div>

@@ -3,20 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import boxHedgesImage from "../public/img/boxhedges.jpeg";
 import metalarches from "../public/img/metalarches.jpg";
-import birthdaystacknumbersm from "../public/img/birthdaystacknumbersm.jpg";
+import birthdaystacknumbersm from "../public/img/birthdaystacknumbersmcropped.jpg";
 import diyballoonkit from "../public/img/diyballoonkit.jpg";
 
 const RentalItems = () => {
   return (
     <div className="container mx-auto p-4">
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
         <div className="card bg-base-100 shadow-xl">
           <figure>
             <Image
               src={boxHedgesImage}
               alt="Box Hedges"
-              width={500}
-              height={300}
             />
           </figure>
           <div className="card-body p-4">
@@ -43,8 +41,6 @@ const RentalItems = () => {
             <Image
               src={metalarches}
               alt="Set of 3 Metal Arches"
-              width={500}
-              height={300}
             />
           </figure>
           <div className="card-body p-4">
@@ -76,8 +72,6 @@ const RentalItems = () => {
             <Image
               src={birthdaystacknumbersm}
               alt="Birthday Number Stack"
-              width={500}
-              height={300}
             />
           </figure>
           <div className="card-body p-4">
@@ -108,8 +102,6 @@ const RentalItems = () => {
             <Image
               src={diyballoonkit}
               alt="DIY Balloon Kit"
-              width={500}
-              height={300}
             />
           </figure>
           <div className="card-body p-4">
@@ -138,7 +130,7 @@ const RentalItems = () => {
       {/* Button to nav to all products */}
       <div className="flex items-center justify-center mt-5">
         <Link href="/products">
-          <div className="px-6 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
+          <div className="px-6 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 h-14 flex justify-center items-center">
             Click here to see all the products we offer!
           </div>
         </Link>

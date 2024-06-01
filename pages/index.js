@@ -48,7 +48,7 @@ const Home = () => {
       <RentalItems />
       <SectionTitle
         pretitle="Socials"
-        title="See us on Instagram!">
+        title="See us on our socials!">
       </SectionTitle>
       <InstagramEmbed />
 
