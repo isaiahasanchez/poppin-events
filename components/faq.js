@@ -35,8 +35,8 @@ const Faq = () => {
 
 const faqdata = [
   {
-    question: "Why do you need a deposit?",
-    answer: "A deposit is required to secure your date",
+    question: "Do you need a deposit?",
+    answer: "Yes, a deposit is required to secure your date",
   },
   {
     question: "Is my deposit refundable if I cancel my event?",
@@ -44,9 +44,9 @@ const faqdata = [
       "No your deposit is not refundable in any circumstance this is 50% of your total payment.",
   },
   {
-    question: "I want to order from you but i don't see everything i'm looking for?",
+    question: "I want to order from you but I don't see everything I'm looking for?",
     answer:
-      "We are constantly adding new items to our shop, if it is something specific please let us know we would love to accommodate.",
+      "We are constantly adding new items to our shop, if it is something specific please let us know, we would love to accommodate.",
   },
 ];
 
