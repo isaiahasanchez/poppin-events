@@ -12,7 +12,7 @@ const Hero = ({ openPopup }) => {
               Party Supply & Rental Shop
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
-            Servicing people in the San Fernando Valley and Los Angeles area.We are best known for our organic balloon garlands but our services don’t end there!
+            Servicing people in the San Fernando Valley and Los Angeles area. We are best known for our organic balloon garlands but our services don’t end there!
             </p>
 
             <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
