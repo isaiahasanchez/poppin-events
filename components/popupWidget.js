@@ -16,7 +16,7 @@ const PopupWidget = ({ open, setOpen }) => {
   return (
     <div>
       <button
-        className="fixed z-40 flex items-center justify-center transition duration-300 bg-indigo-500 rounded-full shadow-lg right-5 bottom-5 w-24 h-24 focus:outline-none hover:bg-indigo-700 focus:bg-indigo-600 ease"
+        className="fixed z-40 flex items-center justify-center transition duration-300 bg-indigo-500 rounded-full shadow-lg right-5 bottom-5 w-28 h-28 focus:outline-none hover:bg-indigo-700 focus:bg-indigo-600 ease"
         onClick={() => setOpen(!open)}
       >
         <span className="sr-only">Open Contact form Widget</span>

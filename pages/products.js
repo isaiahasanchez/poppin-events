@@ -26,7 +26,6 @@ const sections = [
         title: "Balloons",
         items: [
           { name: "Birthday Number Stack", image: "/img/birthdaystacknumbersm.jpg", price: "$40", description: "" },
-          { name: "Balloon Stack 40 in Number", image: "/img/birthday40.jpg", price: "$30", description: "" },
           { name: "Grab and Go Garland", image: "/img/grabandgogarland.jpg", price: "$25", description: "This is a more cost effective option, this garland will come pre inflated. This is PICKUP ONLY In the city of Northridge or San Fernando.10 ft garland 2-3 colors $300 15 ft garland 3-4 colors $350 20 ft garland 3-5 colors $400 Mini balloons additional $50" },
           { name: "DIY Balloon Kit", image: "/img/diyballoonkit.jpg", price: "$50", description: "The DIY Balloon Kit is a cost-effective and reliable way to create a stunning garland for your next party. It includes balloons, ribbon, hook adhesives, rubber bands, and an instruction card. The kit comes in 5 ft or 10 ft garland options and 3-4 colors per kit, starting at $50. The kit is easy to follow and comes with step-by-step instructions. With its high-quality materials, it ensures your guests have a great time at your next party." }
         ]
