@@ -64,6 +64,18 @@ const sections = [
         price: "$70",
         description: "A professional mockup can be added to any order for $70.",
       },
+      {
+        name: "Tropical Backdrop",
+        image: "/img/tropical-backdrop.jpg",
+        price: "$200",
+        description: "$50 delivery and setup fee.",
+      },
+      {
+        name: "Wooden White Backdrop",
+        image: "/img/wooden-white-arch.jpg",
+        price: "$150",
+        description: "$150 daily rental $50 delivery & setup fee.",
+      },
     ],
   },
   {
@@ -166,6 +178,12 @@ const sections = [
         image: "/img/caprisun.png",
         price: "$15 per pack",
         description: "",
+      },
+      {
+        name: "Cocktail Table",
+        image: "/img/cocktail-table.JPG",
+        price: "$20",
+        description: "$20 per table and $25 delivery and pickup fee.",
       },
     ],
   },
